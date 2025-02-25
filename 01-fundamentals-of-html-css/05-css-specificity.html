@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2 {
+      color: darkviolet !important;
+    }
+
+    p {
+      color: blue;
+    }
+
+    .orange {
+      color: orange;
+    }
+
+    .green {
+      color: green;
+    }
+
+    #red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p>p tag : 1</p>
+  <p class="orange">class=orange :2</p>
+  <p class="green orange">class=green 3</p>
+  <!-- 여러개 속성을 줄 때는 공백을 주면 됨 -->
+  <!-- 클래스 내부 요소 여러개는 순서가 없다. -->
+  <p class="orange green">class=green 4</p>
+  <p id="red" class="orange">id=red 5</p>
+  <h2 id="red" class="orange">h2=purple>Important 6</h2>
+  <p id="red" class="orange" style="color: brown;">4개의 스타일이 겹침. InlineStyle=brown 7</p>
+  <h2 id="red" class="orange" style="color: brown;">h2=purple>Important8</h2>
+  <!-- important: 다른 우선순위보다 우선적용. 강제 적용방식이라 권장X -->
+</body>
+
+</html>

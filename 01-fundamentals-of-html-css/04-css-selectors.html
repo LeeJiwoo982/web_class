@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      color: red;
+    }
+
+    h2 {
+      color: orange;
+    }
+    /* h2는 두개의 스타일이 충돌된 상태, 겹칠(중복) 때 우선순위가 있음 */
+
+    h3,
+    h4 {
+      color: blue;
+    }
+
+    .green {
+      /* class green인 애들 공통적 적용 */
+      color: green;
+    }
+    /* 점점 선택의 폭이 좁아진다. */
+
+    #purple {
+      color: purple;
+    }
+    /* id 선택자 */
+    /* class와 id는 집약적. 클래스는 다수, 아이디는 단일 */
+    /* class:재사용 공통적 스타일을 만들고 적용이 필요할 때, id:하나만 있도록, 상수값 */
+    /* 대부분 class 선택자 사용 */
+    
+    .green > span {
+      font-size: 50px;
+    }
+    /* 자식 결합자 */
+
+    .green li {
+      color: yellowgreen;
+    }
+    /* 나중되면 길어져서  */
+  </style>
+</head>
+
+<body>
+  <h1 class="green">Heading</h1>
+  <h2>선택자</h2>
+  <h3>연습</h3>
+  <h4>반가워요</h4>
+  <p id="purple">과목 목록</p>
+  <ul class="green">
+    <li>파이썬</li>
+    <li>알고리즘</li>
+    <li>웹
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>PYTHON</li>
+      </ol>
+    </li>
+  </ul>
+  <p class="green">Lorem, <span>ipsum</span> dolor.</p>
+</body>
+
+</html>
