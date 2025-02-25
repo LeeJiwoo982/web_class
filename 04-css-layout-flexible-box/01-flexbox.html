@@ -7,25 +7,34 @@
   <title>Document</title>
   <style>
     .container {
+      /* 컨트롤 주체 */
       height: 500px;
       border: 1px solid black;
-      /* display: flex; */
-      /* flex-direction: row; */
+      display: flex;
+      /* 노멀에서 벗엇나 가로정렬로 */
+
+      /* 메인축이 어디인지를 설정 (기본:row)*/
+      flex-direction: row;
       /* flex-direction: column; */
       /* flex-direction: row-reverse; */
       /* flex-direction: column-reverse; */
 
+      /* 넘쳤을 때. 한 행에 들어가지 않는 경우엣 사용 */
       /* flex-wrap: nowrap; */
-      /* flex-wrap: wrap; */
+      flex-wrap: wrap;
 
+      /* 주축정렬 가운데정렬 편함 */
       /* justify-content: flex-start; */
       /* justify-content: center; */
       /* justify-content: flex-end; */
 
+      /* 교차축정렬1:여러줄 
+      flex-wrap: wrap이어야 함 */
       /* align-content: flex-start; */
       /* align-content: center; */
       /* align-content: flex-end; */
 
+      /* 교차축 정렬2: 한 줄 */
       /* align-items: flex-start; */
       /* align-items: center; */
       /* align-items: flex-end; */
@@ -39,11 +48,11 @@
     }
 
     .item1 {
-      /* align-self: center; */
+      align-self: center;
     }
 
     .item2 {
-      /* align-self: flex-end; */
+      align-self: flex-end;
     }
   </style>
 </head>

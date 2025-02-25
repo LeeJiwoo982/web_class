@@ -15,10 +15,13 @@
     }
 
     .container {
-      /* position: relative; */
+      position: relative;
       height: 300px;
       width: 300px;
       border: 1px solid black;
+      left: 100px;
+      /* absolute의 기준이 되는 부모, 가장 가까운 relative인 부모
+      부모가 움직일 떄떄 */
     }
 
     .box {
@@ -33,21 +36,28 @@
     }
 
     .absolute {
-      /* position: absolute; */
+      position: absolute;
+      /* normal flow에서 벗어남. 위치를 **버린다.**
+      relative 같이 움직인 이유: absolute의 자리가 빈공간이 됨, 집나간애
+      레이아웃 깨뜨릴 수 있음(조심해서 써야됨)*/
       background-color: lightgreen;
       top: 100px;
       left: 100px;
     }
 
     .relative {
-      /* position: relative; */
+      position: relative;
       background-color: lightblue;
       top: 100px;
+      /* 탑 영역에 100을 준것으로 이동방향=아래, 영역을 주는 방향으로 실제 이동은 반대방향 
+      static 위치 기준으로 움직임*/
       left: 100px;
     }
 
     .fixed {
-      /* position: fixed; */
+      position: fixed;
+      /* 위, 오른쪽 영역 제거
+      스크롤 내려도 따라온다. */
       background-color: gray;
       top: 0;
       right: 0;
