@@ -16,63 +16,67 @@
 </head>
 
 <body>
+  <!-- 기본 Basic -->
   <h2 class="text-center">Basic</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col">
         <div class="box">col</div>
       </div>
     </div>
-    <div class="">
-      <div class="">
+    <div class="row">
+      <div class="col-4">
         <div class="box">col-4</div>
       </div>
-      <div class="">
+      <div class="col-4">
         <div class="box">col-4</div>
       </div>
-      <div class="">
+      <div class="col-4">
         <div class="box">col-4</div>
       </div>
     </div>
-    <div class="">
-      <div class="">
+    <div class="row">
+      <div class="col-2">
         <div class="box">col-2</div>
       </div>
-      <div class="">
+      <div class="col-8">
         <div class="box">col-8</div>
       </div>
-      <div class="">
+      <div class="col-2">
         <div class="box">col-2</div>
       </div>
+      <!-- 하나의 행은 12칸이 무조건 적거나 넘으면 그만큼 적고 넘침
+       col 클래스에는 얼마를 차지할 지 명시적으로 적어야 함 col-4처럼 -->
     </div>
   </div>
 
   <hr>
 
+  <!-- 중첩Nesting -->
   <h2 class="text-center">Nesting</h2>
-  <div class="">
-    <div class="">
-      <div class="box">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 box">
         <div>col-4</div>
       </div>
-      <div class="box">
-        <div class="">
-          <div class="">
+      <div class="col-8 box">
+        <div class="row">
+          <div class="col-6">
             <div class="box">col-6</div>
           </div>
-          <div class="">
+          <div class="col-6">
             <div class="box">col-6</div>
           </div>
-          <div class="">
+          <div class="col-6">
             <div class="box">col-6</div>
           </div>
-          <div class="">
+          <div class="col-6">
             <div class="box">col-6</div>
           </div>
         </div>
@@ -81,41 +85,52 @@
   </div>
 
   <hr>
-
+  
+  <!-- 상쇄 Offset -->
+  <!-- 격자무늬 콘텐츠, 양쪽을 버려도 된 -->
   <h2 class="text-center">Offset</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
         <div class="box">col-4</div>
       </div>
-      <div class="">
+      <div class="col-4 offset-4">
         <div class="box">col-4 offset-4</div>
       </div>
     </div>
-    <div class="">
-      <div class="">
+    <div class="row">
+      <div class="col-3 offset-3">
         <div class="box">col-3 offset-3</div>
       </div>
-      <div class="">
+      <div class="col-3 offset-3">
         <div class="box">col-3 offset-3</div>
       </div>
     </div>
-    <div class="">
-      <div class="">
+    <div class="row">
+      <div class="col-6 offset-3">
         <div class="box">col-6 offset-3</div>
       </div>
     </div>
   </div>
 
   <hr>
+  
+  <!-- 거터 Gutters
+   gx-0 좌우 padding 
+   grid sys와 col 사이의 여백,
+   x축 padding, y축 margin으로 여백 생성 
+   col 실제 차지영역은 12칸은 변하지 않음. 변하는 건 contents영역이 좁아지는 것
+   가장 큰 틀은 변하지 않고, 내부의 콘텐츠의 좌우를 줄이는 것
+   container로 만들어진 행의 크기는 12칸 !고정! 변경하면 깨질 수 있음-->
 
+  <!-- gx-0 좌우 padding, row에 값을 준다. -->
   <h2 class="text-center">Gutters(gx-0)</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row gx-0">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
     </div>
@@ -123,19 +138,20 @@
 
   <hr>
 
+  <!-- gy-5 상하 margin. row에 값 넣기-->
   <h2 class="text-center">Gutters(gy-5)</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
     </div>
@@ -144,18 +160,18 @@
   <hr>
 
   <h2 class="text-center">Gutters(g-5)</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
     </div>
