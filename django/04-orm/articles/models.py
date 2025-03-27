@@ -7,3 +7,6 @@ class Article(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+# 이 모델로 인스턴스 만들고
+# CRUD도 할 것
