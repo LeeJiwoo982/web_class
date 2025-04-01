@@ -1,11 +1,16 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static "articles/style.css" %}">
   <title>Document</title>
 </head>
 <body>
+  <img src="{% static 'articles/sample-1.png' %}" alt="img" width="100">
+  <img src="{% static 'sample-2.png' %}" alt="image" width="100">
   <h1>Articles</h1>
   <a href="{% url "articles:create" %}">CREATE</a>
   <hr>

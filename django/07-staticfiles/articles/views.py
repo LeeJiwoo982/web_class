@@ -21,7 +21,7 @@ def detail(request, pk):
 
 def create(request):
     if request.method == 'POST':
-        form = ArticleForm(request.POST)
+        form = ArticleForm(request.POST, files=request.FILES)
         if form.is_valid():
             article = form.save()
             return redirect('articles:detail', article.pk)
@@ -38,11 +38,12 @@ def delete(request, pk):
     article.delete()
     return redirect('articles:index')
 
-
+# 수정하기 통합
+# **instance**
 def update(request, pk):
     article = Article.objects.get(pk=pk)
     if request.method == 'POST':
-        form = ArticleForm(request.POST, instance=article)
+        form = ArticleForm(request.POST, request.FILES, instance=article)
         if form.is_valid():
             form.save()
             return redirect('articles:detail', article.pk)
